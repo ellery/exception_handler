@@ -1,4 +1,3 @@
-require email_process
 
 Griddler.configure do |config|
   config.processor_class = EmailProcessor # CommentViaEmail

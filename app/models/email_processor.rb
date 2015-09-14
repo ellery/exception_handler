@@ -11,7 +11,7 @@ class EmailProcessor
       a.messages.create(:message => @email.body)
     else
       a.save
-      SlackerService.new.send_slack("https://exceptionnotifcation.herokuapp.com/subject/"+ a.id, @email.to[:token] , @email.subject).deliver
+      SlackerService.new.send_slack("https://exceptionnotifcation.herokuapp.com/subject/"+ a.id.to_s, @email.to[:token] , @email.subject).deliver
       a.messages.create(:message => @email.body)
     end
     a.save!

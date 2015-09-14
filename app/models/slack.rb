@@ -13,17 +13,17 @@ class SlackerService
     @channel = channel
   end
 
-  def send_slack(user, application, title)
+  def send_slack(link, application, title)
     params = {
         attachments: [
             {
-                title: 'Wibble button clicked',
-                fallback: 'Wibble button clicked',
+                title: 'New Exception Reported',
+                fallback: 'New Exception Reported',
                 color: GOOD,
                 fields: [
                     {
-                        title: 'User',
-                        value: user,
+                        title: 'Link',
+                        value: link,
                         short: true
                     },
                     {

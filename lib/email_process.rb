@@ -4,17 +4,15 @@ class EmailProcessor
   end
 
   def process
+        
+    a =  Subject.find_or_initialize_by(:subject => @email.subject, :from => @email.from[:email])
     
-
-    logger.error @email	
-    # all of your application-specific code here - creating models,
-    # processing reports, etc
-
-    # here's an example of model creation
-    #user = User.find_by_email(@email.from[:email])
-    #user.posts.create!(
-    #  subject: @email.subject,
-    #  body: @email.body
-    #)
+    if a.messages.count > 0
+      a.messages.create(:message => @email.body)
+    else
+      a.save
+      a.messages.create(:message => @email.body)
+    end
+    a.save
   end
 end

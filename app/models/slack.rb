@@ -24,7 +24,7 @@ class SlackerService
                 fields: [
                     {
                         title: 'Link',
-                        value: ENV['SITE_URL'] + "/subject/" + link,
+                        value: ENV['SITE_URL'] + "subjects/" + link,
                         short: true
                     },
                     {

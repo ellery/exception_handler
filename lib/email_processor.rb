@@ -1,11 +1,9 @@
 class EmailProcessor
   
-  def initialize(email)
-    @email = email
-  end
 
-  def process
-        
+  def  self.process(email)
+    @email = email
+    
     a =  Subject.find_or_initialize_by(:subject => @email.subject, :from => @email.from[:email])
     
     if a.messages.count > 0

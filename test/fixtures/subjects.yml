@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  subject: MyString
+  from: MyString
+  priority: 1
+  to: MyString
+  project_id: 
+
+two:
+  subject: MyString
+  from: MyString
+  priority: 1
+  to: MyString
+  project_id: 

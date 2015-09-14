@@ -251,7 +251,6 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   devise!
   dotenv-rails
-  griddler
   griddler-mandrill
   jbuilder (~> 2.0)
   jquery-rails

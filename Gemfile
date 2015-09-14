@@ -62,3 +62,4 @@ group :development, :test do
   gem 'dotenv-rails'
 end
 gem 'griddler-mandrill'
+require 'slack-notifier'

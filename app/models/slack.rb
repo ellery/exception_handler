@@ -24,7 +24,7 @@ class SlackerService
                 fields: [
                     {
                         title: 'Link',
-                        value: link,
+                        value: ENV['SLACK_WEBHOOK_URL'] + "/subject/" + link,
                         short: true
                     },
                     {

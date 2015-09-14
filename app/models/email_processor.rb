@@ -11,9 +11,9 @@ class EmailProcessor
     if a.messages.count > 0
       a.messages.create(:message => @email.body)
     else
-      a.save
+      a.save!
       a.messages.create(:message => @email.body)
     end
-    a.save
+    a.save!
   end
 end

@@ -1,5 +1,6 @@
 class SubjectsController < ApplicationController
   before_action :set_subject, only: [:show, :edit, :update, :destroy]
+  before_filter :require_user_signed_in
 
   # GET /subjects
   # GET /subjects.json

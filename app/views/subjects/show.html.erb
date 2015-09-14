@@ -15,16 +15,21 @@
       <dd><pre class="prettyprint"><%= @subject.to %></pre></dd>
   </dl>
 </div>
+<% model_class.messages.each do |a| %>
+<div class="fieldset">
+  <dl>
+    <dt class="label label-default">Message Body</dt>
+    <dd><pre class="prettyprint"><%= a.body rescue "none" %></pre></dd>
+  </dl>
+  <dl>
+    <dt class="label label-default">Message date</dt>
+    <dd><pre class="prettyprint"><%= a.created_at rescue "none" %></pre></dd>
+  </dl>
+</div>
+<% end >
 
 <div class="form-group">
   <%= link_to t('.back', :default => t("helpers.links.back")),
               subjects_path, :class => 'btn btn-default'  %>
-  <%= link_to t('.edit', :default => t("helpers.links.edit")),
-              edit_subject_path(@subject), :class => 'btn btn-default' %>
-  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
-              subject_path(@subject),
-              :method => 'delete',
-              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
-              :class => 'btn btn-danger' %>
 </div>
 

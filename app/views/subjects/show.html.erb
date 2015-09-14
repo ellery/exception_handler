@@ -15,7 +15,7 @@
       <dd><pre class="prettyprint"><%= @subject.to %></pre></dd>
   </dl>
 </div>
-<% model_class.messages.each do |a| %>
+<% @subject.messages.each do |a| %>
 <div class="fieldset">
   <dl>
     <dt class="label label-default">Message Body</dt>

@@ -2,11 +2,11 @@ class EmailProcessor
   
   def initialize(email)
     @email = email
-    logger.error " HI i'm init"
+    Logger.error " HI i'm init"
   end
 
   def process
-    logger.error "ignore that moron i'mm the process "
+    Logger.error "ignore that moron i'mm the process "
     a =  Subject.find_or_initialize_by(:subject => @email.subject, :from => @email.from[:email])
     
     if a.messages.count > 0

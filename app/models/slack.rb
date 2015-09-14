@@ -1,4 +1,5 @@
 class SlackerService
+  require 'net/http'
   NAME_AND_ICON = {
       username: 'Exception Notifier',
       icon_emoji: ':bat:'

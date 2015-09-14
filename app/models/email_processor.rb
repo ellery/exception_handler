@@ -5,7 +5,7 @@ class EmailProcessor
   end
 
   def process
-    a =  Subject.find_or_initialize_by(:subject => @email.subject, :from => @email.from[:email])
+    a =  Subject.find_or_initialize_by(:subject => @email.subject, :to => @email.to[:email])
     
     if a.messages.count > 0
       a.messages.create(:message => @email.body)
